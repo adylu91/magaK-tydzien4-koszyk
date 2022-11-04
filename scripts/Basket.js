@@ -23,7 +23,7 @@ class Basket {
   }
 
   getProductsFromLocaleStorage() {
-    return JSON.parse(localStorage.getItem("basket"));
+    this.products = JSON.parse(localStorage.getItem("basket"));
   }
 
   getTotalValue() {
