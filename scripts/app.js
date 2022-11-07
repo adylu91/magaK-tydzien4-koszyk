@@ -3,11 +3,14 @@ import { Basket } from "./Basket.js";
 import { ProductsList } from "./ProductsList.js";
 
 const productsList = new ProductsList();
-productsList.addProduct(new Product("tv", 200));
-productsList.addProduct(new Product("stolik", 100));
-productsList.addProduct(new Product("piwo", 5));
-productsList.addProduct(new Product("kanapa", 1000));
-productsList.addProduct(new Product("ramka", 50));
+
+if (productsList.getProductsFromLocaleStorage().length === 0) {
+  productsList.addProduct(new Product("tv", 200));
+  productsList.addProduct(new Product("stolik", 100));
+  productsList.addProduct(new Product("piwo", 5));
+  productsList.addProduct(new Product("kanapa", 1000));
+  productsList.addProduct(new Product("ramka", 50));
+}
 
 const basket = new Basket();
 
